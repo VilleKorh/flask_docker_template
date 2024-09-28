@@ -4,7 +4,7 @@ This project demonstrates how to set up a simple "Hello World" Flask application
 
 Flask and Gunicorn are run in one container, while Nginx is run in another container to serve as a reverse proxy. The Flask app is accessible through Nginx on port 80.
 
-Both containers are using the samevolumes to store persistent app files, data and logs. The Flask app logs are stored in /logs/app.log, while the Nginx access and error logs are stored in /logs/nginx.log. The SQLite database is stored in /data/requests.sqlite.
+Both containers are using same volumes to store persistent app files, data and logs. The Flask app logs are stored in /logs/app.log, while the Nginx access and error logs are stored in /logs/nginx.log. The SQLite database is stored in /data/requests.sqlite.
 
 ## Explanation
 
@@ -63,9 +63,35 @@ In this setup:
 ├── docker-compose.yml
 ├── nginx.conf
 
+The project structure consists of the following directories and files:
 
+ - app/: Contains the Flask application code and requirements.txt file.
+ - logs/: Contains the log files for the Flask app and Nginx.
+ - data/: Contains the SQLite database file.
+ - Dockerfile: Builds the Docker image for the Flask app.
+ - Dockerfile.nginx: Builds the Docker image for Nginx.
+ - docker-compose.yml: Defines the services for the Flask app and Nginx.
+ - nginx.conf: Contains the Nginx configuration.
 
-## Running the Application
+# Development and deployment
+
+## Development on Laptop
+ - Develop the Application: You can develop and test your Flask application on your laptop using the provided Docker setup.
+ - Build the Docker Images: Build the Docker images on your laptop to ensure everything works as expected.
+ - Test the Application: Run the containers on your laptop and test the application to ensure it works correctly.
+ - Debugging: If you encounter any issues, you can debug the application on your laptop before deploying it to the server.
+
+## Deployment on Server
+ - Transfer Files: Once you have everything working on your laptop, transfer the necessary files to your server. You can use tools like scp (secure copy) or a USB drive to transfer the files.
+ - Build Docker Images on the server: If the server has a different architecture ( for example ARM, Raspberry Pi), you will need to build the Docker images on the Server itself.
+
+## How to build and run the containers
+
+Navigate to Project Directory:
+
+    ```bash
+    cd /path/to/your/project/
+    ```
 
 Build and run the containers:
     
@@ -74,3 +100,58 @@ Build and run the containers:
     ```
 
 This setup will create a Flask app served by Gunicorn, with Nginx as a reverse proxy in a separate container. The SQLite database and log files will be stored persistently in the data and logs directories, respectively.
+
+Access the Flask app:
+
+    Open a web browser and go to http://localhost
+
+You should see the "Hello World" message along with the time of the previous request and the total number of requests.
+
+## How to stop the containers
+
+To stop the containers, press `Ctrl+C` in the terminal where you ran `docker-compose up`. This will stop the containers and clean up the resources.
+
+Alternatively, you can run the following command in a new terminal window:
+
+    ```bash
+    docker-compose down
+    ```
+
+This will stop and remove the containers, networks, and volumes created by `docker-compose up`.
+
+## How to access the logs
+
+The logs for the Flask app and Nginx are stored in the logs directory on your host machine. You can access them by navigating to the logs directory in your project directory.
+
+For example, to view the Flask app logs:
+
+    ```bash
+    cat logs/app.log
+    ```
+
+To view the Nginx access and error logs:
+
+    ```bash
+    cat logs/nginx.log
+    ```
+
+## How to access the SQLite database
+
+The SQLite database file is stored in the data directory on your host machine. You can access it using an SQLite client or by running SQLite commands in the terminal.
+
+For example, to open the SQLite database using the SQLite command-line client:
+
+    ```bash
+    sqlite3 data/requests.sqlite
+    ```
+
+## How to access the Flask app container
+
+If you need to access the Flask app container for debugging or other purposes, you can do so using the following command:
+
+    ```bash
+    docker exec -it flaskapp /bin/bash
+    ```
+
+This will open a bash shell in the Flask app container, allowing you to run commands and inspect the container.
+
