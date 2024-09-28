@@ -1,0 +1,37 @@
+2024-09-28 18:15:14,865 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2024-09-28 18:15:14,865 INFO: [33mPress CTRL+C to quit[0m
+2024-09-28 18:15:35,528 INFO: Database initialized
+2024-09-28 18:15:35,543 INFO: Current time: 2024-09-28 18:15:35, Previous request time: No previous requests, Total requests: 1
+2024-09-28 18:15:35,543 INFO: 127.0.0.1 - - [28/Sep/2024 18:15:35] "GET / HTTP/1.1" 200 -
+2024-09-28 18:15:35,628 INFO: Database initialized
+2024-09-28 18:15:35,630 INFO: 127.0.0.1 - - [28/Sep/2024 18:15:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-28 18:15:41,524 INFO: Database initialized
+2024-09-28 18:15:41,537 INFO: Current time: 2024-09-28 18:15:41, Previous request time: 2024-09-28 18:15:35, Total requests: 2
+2024-09-28 18:15:41,538 INFO: 127.0.0.1 - - [28/Sep/2024 18:15:41] "GET / HTTP/1.1" 200 -
+2024-09-28 18:15:45,580 INFO: Database initialized
+2024-09-28 18:15:45,593 INFO: Current time: 2024-09-28 18:15:45, Previous request time: 2024-09-28 18:15:41, Total requests: 3
+2024-09-28 18:15:45,594 INFO: 127.0.0.1 - - [28/Sep/2024 18:15:45] "GET / HTTP/1.1" 200 -
+2024-09-28 15:17:16,000 INFO: Database initialized
+2024-09-28 15:17:16,047 INFO: Current time: 2024-09-28 15:17:16, Previous request time: 2024-09-28 18:15:45, Total requests: 4
+2024-09-28 15:17:16,339 INFO: Database initialized
+2024-09-28 15:17:18,923 INFO: Database initialized
+2024-09-28 15:17:19,011 INFO: Current time: 2024-09-28 15:17:18, Previous request time: 2024-09-28 15:17:16, Total requests: 5
+2024-09-28 16:19:12,772 INFO: Database initialized
+2024-09-28 16:19:12,834 INFO: Current time: 2024-09-28 16:19:12, Previous request time: 2024-09-28 15:17:18, Total requests: 6
+2024-09-28 16:19:16,352 INFO: Database initialized
+2024-09-28 16:19:16,402 INFO: Current time: 2024-09-28 16:19:16, Previous request time: 2024-09-28 16:19:12, Total requests: 7
+2024-09-28 16:19:54,444 INFO: Database initialized
+2024-09-28 16:19:54,502 INFO: Current time: 2024-09-28 16:19:54, Previous request time: 2024-09-28 16:19:16, Total requests: 8
+2024-09-28 16:19:57,292 INFO: Database initialized
+2024-09-28 16:19:57,350 INFO: Current time: 2024-09-28 16:19:57, Previous request time: 2024-09-28 16:19:54, Total requests: 9
+2024-09-28 16:20:37,110 INFO: Database initialized
+2024-09-28 16:20:37,159 INFO: Current time: 2024-09-28 16:20:37, Previous request time: 2024-09-28 16:19:57, Total requests: 10
+2024-09-28 16:21:45,017 INFO: Database initialized
+2024-09-28 16:21:45,065 INFO: Current time: 2024-09-28 16:21:45, Previous request time: 2024-09-28 16:20:37, Total requests: 11
+2024-09-28 16:21:52,239 INFO: Database initialized
+2024-09-28 16:21:52,287 INFO: Current time: 2024-09-28 16:21:52, Previous request time: 2024-09-28 16:21:45, Total requests: 12
+2024-09-28 16:21:55,240 INFO: Database initialized
+2024-09-28 16:21:55,293 INFO: Current time: 2024-09-28 16:21:55, Previous request time: 2024-09-28 16:21:52, Total requests: 13
