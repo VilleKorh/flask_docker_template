@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR //flask_app/app
 
 # Copy the requirements file into the container
 COPY requirements.txt requirements.txt

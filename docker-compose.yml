@@ -8,9 +8,9 @@ services:
     build: .
     # Mount the app, logs, and data directories from the host to the container
     volumes:
-      - ./app:/app
-      - ./logs:/logs
-      - ./data:/data
+      - ./app:/flask_app/app
+      - ./logs:/flask_app/logs
+      - ./data:/flask_app/data
     # Set environment variables for the Flask app
     environment:
       - FLASK_ENV=development

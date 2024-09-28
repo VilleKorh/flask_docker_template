@@ -42,9 +42,9 @@ The app volume in the docker-compose.yml file is used to mount the application c
 
 In this setup:
 
- - ./app:/app mounts the app directory from your host machine to the /app directory in the container.
- - ./logs:/logs mounts the logs directory from your host machine to the /logs directory in the container.
- - ./data:/data mounts the data directory from your host machine to the /data directory in the container.
+ - ./app:/flask_app/app mounts the app directory from your host machine to the /flask_app/app directory in the container.
+ - ./logs:/flask_app/logs mounts the logs directory from your host machine to the /flask_app/logs directory in the container.
+ - ./data:/flask_app/data mounts the data directory from your host machine to the /flask_app/data directory in the container.
 
 ## Project Structure
 
